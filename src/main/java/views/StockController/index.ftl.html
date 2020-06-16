@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Stock</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/main.css" />
+		
+	</head>
+	<body>
+		<#if stockList??>
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  <h1 style="text-align:center">Stock</h1>
+	  <br>
+	  <br>
+	  <!-- Table -->
+	  <table class="table">
+	  	<thead>
+	  		<tr><th>Medicine Name</th><th>Company Name</th><th>Quantity</th></tr>
+	  	</thead>
+	  		<tbody>
+				<#list stockList as stock>
+			  		<tr>
+						<td>${stock.medicineName}</td>
+						<td>${stock.medicineCompany}</td>
+						<td>${stock.quantity}</td>
+			  		</tr>
+				</#list> 
+		  	</tbody>
+		
+	  </table>
+	</div>
+	<form method="post" action="/naya">
+	<center><input type="submit" class="btn btn-danger" value="CANCEL"></center>
+	<#else>
+		not found	
+	</#if>
+
+		
+			
+	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
